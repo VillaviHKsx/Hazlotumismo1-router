@@ -102,12 +102,14 @@ const deletePlayer = async (req, res) => {
     res.json({ message: 'Player eliminado' });
 };
 
-// Rutas de los servicios
-app.get('/api/v1/players', getPlayers);
-app.post('/api/v1/players', createPlayer);
-app.get('/api/v1/players/:id', getPlayerById);
-app.patch('/api/v1/players/:id', updatePlayer);
-app.delete('/api/v1/players/:id', deletePlayer);
+const toysRouter = express.Router();
+app.use('/api/v1/players', toysRouter);
 
+// Rutas de los servicios
+toysRouter.get('/', getPlayers);
+toysRouter.post('/', createPlayer);
+toysRouter.get('/:id', getPlayerById);
+toysRouter.patch('/:id', updatePlayer);
+toysRouter.delete('/:id', deletePlayer);
 
 app.listen(8080);

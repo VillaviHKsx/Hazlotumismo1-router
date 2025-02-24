@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "7357e22e-4544-4864-aec3-89255c4a07c8",
+		"name": "Hazlotumismo1-router",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38340876"
+	},
+	"item": [
+		{
+			"name": "Listar Players",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/v1/players",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"players"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Player por ID",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/v1/players/597ae149-81fd-4f42-9f46-47bcd174df30",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"players",
+						"597ae149-81fd-4f42-9f46-47bcd174df30"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Player",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n    \"first_name\": \"Andre\",\n    \"last_name\": \"SanMartin\",\n    \"age\": 43,\n    \"Team\": \"Warriors\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/v1/players",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"players"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Player por ID",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"Andrea Jaqueline\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/v1/players/59bd7bdb-47bc-47fd-9a6a-f947124c63cc",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"players",
+						"59bd7bdb-47bc-47fd-9a6a-f947124c63cc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Player por ID",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/v1/players/326b988f-b606-48fa-80e8-a4f0a6ccbd6e",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"players",
+						"326b988f-b606-48fa-80e8-a4f0a6ccbd6e"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
